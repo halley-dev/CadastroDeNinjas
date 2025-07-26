@@ -2,18 +2,20 @@ package dev.java10x.CadastroDeNinja;
 
 import jakarta.persistence.*;
 
+@Entity
+@Table(name = "tb_cadastro")
+
 // entity ele transforma uma classe em uma entidade do BD
 //JPA Java Persistence API
-@Entity
-@Table(name="tb_cadastro")
-public class NinjaModel {
 
+public class NinjaModel {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    long id;
-    String nome;
-    String email;
-    int idade;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private long id;
+    private String nome;
+    private String email;
+    private int idade;
 
     public NinjaModel() {
     }
