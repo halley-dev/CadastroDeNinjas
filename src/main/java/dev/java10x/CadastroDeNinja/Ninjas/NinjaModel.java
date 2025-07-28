@@ -19,15 +19,22 @@ import java.util.List;
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(name="id")
     private long id;
 
+    @Column(name="nome")
     private String nome;
 
     @Column(unique = true)// essa coluna e unica
     private String email;
 
+    @Column(name="img_url")
+    private String img_url;
+
+    @Column(name="idade")
     private int idade;
+
+
     @ManyToOne // Coluna onde tem uma unica missao
     @JoinColumn(name="missoes_id")// chave estrageira foreing
     private MissoesModel missoes;
