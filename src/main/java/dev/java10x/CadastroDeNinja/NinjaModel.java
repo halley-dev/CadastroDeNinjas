@@ -2,9 +2,15 @@ package dev.java10x.CadastroDeNinja;
 
 import dev.java10x.CadastroDeNinja.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_cadastro")
+@NoArgsConstructor // contrutor sem argumentos
+@AllArgsConstructor// construtor com argumentos
+@Data// getter e seter
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
