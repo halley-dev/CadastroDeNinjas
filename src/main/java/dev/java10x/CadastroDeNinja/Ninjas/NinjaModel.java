@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_cadastro")
 @NoArgsConstructor // contrutor sem argumentos
 @AllArgsConstructor// construtor com argumentos
-@Data// getter e seter
+@Data// getter e seter abstract
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
