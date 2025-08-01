@@ -29,15 +29,15 @@ import java.util.List;
     }
 
     //Mostra Ninja (READ)
-    @GetMapping("ListarNinjas")
+    @GetMapping("/listar")
     public List<NinjaModel> listaNinjas() {
         return ninjaService.ListarNinjas(); // returno vem la do classe service
     }
-
+    //localhost:8080/ninjas/listar
     //Mostra Ninja por ID (READ)
-    @GetMapping("todosID")
-    public String mostraTodosOsNinjasPorId() {
-        return "Mostra Ninja por Id";
+    @GetMapping("/listar/{id}")
+    public NinjaModel listaNinjasPorId(@PathVariable Long id) {
+        return ninjaService.listaNinjasPorId(id);
     }
 
     //Altera ninja (UPADATE)
